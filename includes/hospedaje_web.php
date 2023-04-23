@@ -41,9 +41,8 @@ class hospedaje_web extends db implements crud {
     public function enviarNotificacionVencimiento($id, $template) {
         
         $data = $this->obtenerInformacionCliente($id);
-        var_dump($data);
-        die();
-        if ($data['suceed'] == TRUE && count($data['data'])>0) {
+        
+        if ($data['suceed'] && count($data['data'])>0) {
             
             if (file_exists($template)) {
                 $contenido_original = file_get_contents($template);
@@ -115,7 +114,7 @@ class hospedaje_web extends db implements crud {
                 echo $template." no existe";
             }
         } else {
-            echo "Dominio no registrado [$dominio]";
+            echo "Dominio no registrado [$id]";
         }
     }
 }
