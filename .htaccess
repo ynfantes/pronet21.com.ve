@@ -6,10 +6,10 @@ RewriteEngine on
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*) https://www.pronet21.com.ve/$1 [R=301,L]
 
-Rewriterule ^notificaciones/([A-Za-z\-]+)/([A-Za-z\.-]+)$ notificaciones/index.php?accion=$1&id=$2 [L]
+RewriteRule ^notificaciones/([A-Za-z\-]+)/([A-Za-z\.-]+)$ notificaciones/index.php?accion=$1&id=$2 [L]
 RewriteRule ^portafolio-diseno-web.php$ portafolio.html [L]
-RewriteRule ^asesoria-web.php‎$ agenciaweb.html [L]
-RewriteRule ^seleccionar-pagina-web-para-mi-empresa.php‎$ como-seleccionar-pagina-web-para-mi-empres.html [L] 
+RewriteRule ^asesoria-web.php$ agenciaweb.html [L]
+RewriteRule ^seleccionar-pagina-web-para-mi-empresa.php$ como-seleccionar-pagina-web-para-mi-empres.html [L] 
 #RewriteBase /
 #AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript 
 
